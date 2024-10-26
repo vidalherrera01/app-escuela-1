@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>waiting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-text class="ion-margin-bottom">
+      <h1><strong>Estado:</strong></h1>
+      <ion-text class="ion-margin-bottom">En espera de ser aprovado</ion-text>
+    </ion-text>
+
+
+    <div class="circle-container">
+      <ion-img
+        src="https://img.freepik.com/foto-gratis/tiempo-pasa-reloj-arena-azul-cerca_93675-128947.jpg?ga=GA1.1.1686072600.1729371214&semt=ais_hybrid"
+        alt="The Wisconsin State Capitol building in Madison, WI at night">
+      </ion-img>
+
+      <ion-img src="https://cdn-icons-png.freepik.com/256/594/594629.png?ga=GA1.1.1686072600.1729371214&semt=ais_hybrid"
+        class="rotating-image">
+      </ion-img>
+    </div>
+  </div>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="ft_goToProduct()" color="secondary" expand="full" class="square-button">
+    <div>
+      <p>Hacer Otra Compra</p>
+    </div>
+  </ion-button>
+  <ion-button (click)="ft_goToClasses()" color="secondary" expand="full" class="square-button">
+    <div>
+      <p> Pre-Inscribir otra clase</p>
+    </div>
+  </ion-button>
+  <app-navegationrouter></app-navegationrouter>
+</ion-footer>

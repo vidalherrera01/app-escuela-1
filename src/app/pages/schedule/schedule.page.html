@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+
+  <ion-item>
+    <ion-toolbar>
+      <ion-title>schedule</ion-title>
+    </ion-toolbar>
+    <app-addstudent></app-addstudent>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container" class="background-page">
+    <ion-text>
+      <h1 class=" text-big">Horario De Clases</h1>
+    </ion-text>
+
+    <ion-item>
+      <ion-label class="ion-margin-start"><strong>Clase</strong></ion-label>
+      <ion-label class="ion-margin-start"><strong>Horario</strong></ion-label>
+    </ion-item>
+
+    <div class="ion-text-center" *ngFor="let dep of arr_dependiente; let i = index">
+      <ion-title color="dark" class="ion-text-start ion-margin-vertical"> {{dep.nombre}}</ion-title>
+
+      <ion-item *ngFor="let cls of dep.cls; let i = index">
+        <img height="30" class="ion-margin-end"
+          src="https://ionicframework.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftop-1.25f9fee6.png&w=48&q=75"
+          alt="error">
+        <ion-label> {{cls.nombre}}</ion-label>
+        <ion-label> {{cls.hours}}</ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="ft_goToClasses()" color="primary" expand="full">
+    <div>
+      <p>Nueva Pre-inscripcion</p>
+    </div>
+  </ion-button>
+</ion-footer>
+<ion-footer>
+  <app-navegationrouter></app-navegationrouter>
+</ion-footer>

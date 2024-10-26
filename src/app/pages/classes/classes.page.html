@@ -1,0 +1,55 @@
+<ion-header :translucent="true">
+  <ion-item>
+    <ion-toolbar>
+      <ion-title>Classes</ion-title>
+    </ion-toolbar>
+    <app-addstudent></app-addstudent>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container" class="background-page">
+
+    <ion-text>
+      <h1 class="text-big">Estudiante</h1>
+    </ion-text>
+
+    <ion-text class="ion-flex">
+      <div>
+        <ion-select class="d-n" [(ngModel)]="sl_student_name" (ionChange)="ft_loadStudent()" aria-label="student"
+          interface="popover" placeholder="Seleccionar Estudiante">
+          <ion-select-option class="d-s" *ngFor="let item of arr_dependiente; let i = index" value={{item.nombre}}>
+            {{item.nombre}}
+          </ion-select-option>
+        </ion-select>
+      </div>
+    </ion-text>
+  </div>
+
+  <div style="height: 200px;"></div>
+
+  <div class="grid-container" *ngFor="let item of arr_classes; let i = index">
+    <div class="img">
+      <ion-img src={{item.img}}></ion-img>
+    </div>
+
+    <ul class="ul">
+      <li class="sobresaliente">{{item.nombre}}</li>
+      <li>Inscripcion: ${{item.ins}}</li>
+      <li> Mensual: ${{item.men}}</li>
+      <li class="sobresaliente">Horario:</li>
+      <li>{{item.hours}}</li>
+    </ul>
+
+    <ion-button [disabled]="arr_disabled.includes(i)" (click)="ft_addClasses(i)"
+      [ngClass]="{ 'green': arr_disabled.includes(i) }" fill="clear">
+      {{arr_disabled.includes(i) ? "Pre-Inscrito" : "Pre-Inscribir" }}
+    </ion-button>
+  </div>
+</ion-content>
+
+<div style=" height: 400px;">
+
+</div>
+<app-navegationrouter></app-navegationrouter>

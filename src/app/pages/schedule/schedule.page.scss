@@ -1,0 +1,32 @@
+.d-n {
+    // color: rgba(245, 222, 179, 0);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+ion-select {
+    background-color: #0288D1;
+    /* Azul claro */
+    color: #FFFFFF;
+    /* Texto en blanco para contraste */
+    border: 1px solid #4FC3F7;
+    /* Borde azul claro */
+}
+
+ion-select-option {
+    color: #FFFFFF;
+    /* Opciones en blanco */
+    background-color: #0288D1;
+    /* Azul claro en opciones */
+}
+
+.text-big {
+    color: #FFFFFF;
+    /* Título en blanco */
+    font-size: 1.8rem;
+}
+
+ion-text {
+    color: #FFFFFF;
+    /* Texto en blanco */
+}

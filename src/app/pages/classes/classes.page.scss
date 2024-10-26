@@ -1,0 +1,97 @@
+.text-item {
+    font-size: small;
+    text-align: left;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    place-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+    border-radius: 60%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.ul {
+    margin: 10px;
+    padding: 0;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco semitransparente */
+    border-radius: 8px;
+}
+
+.d-n {
+    // color: rgba(245, 222, 179, 0);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+.text-big {
+    font-size: 1.8rem;
+    /* Tamaño de texto grande para destacar */
+    font-weight: bold;
+    /* Negrita */
+    color: #333333;
+    /* Color del texto */
+    /* Fondo amarillo para resaltar */
+    padding: 0.2em 0.5em;
+    /* Espacio alrededor del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)1.8
+}
+
+.sobresaliente {
+    color: #FF6F3C;
+    font-weight: bold;
+}
+
+ion-text {
+    color: #FFFFFF;
+    /* Texto en blanco */
+}
+
+ion-button {
+    background-color: #0288D1;
+    /* Azul brillante */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ion-button:hover {
+    background-color: #81D4FA;
+    /* Azul más claro al hacer hover */
+}
+
+ion-select {
+    background-color: #0288D1;
+    /* Azul claro */
+    color: #FFFFFF;
+    /* Texto en blanco para contraste */
+    border: 1px solid #4FC3F7;
+    /* Borde azul claro */
+    padding: 0 25px;
+}
+
+ion-select-option {
+    color: #FFFFFF;
+    /* Opciones en blanco */
+    background-color: #0288D1;
+    /* Azul claro en opciones */
+}
+
+.green {
+    background: #026412;
+}

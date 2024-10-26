@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>enroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" class="background-page">
+    <ion-text>
+      <h1>Datos Del Estudiante</h1>
+    </ion-text>
+
+    <ion-card>
+      <ion-card-header class="background-page">
+        <ion-card-title>Formulario</ion-card-title>
+        <ion-card-subtitle color="dark">Llenar con sus datos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_nombre" label=" Estudiante" placeholder="Nombre del estudiante"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_edad" type="number" label="Edad" placeholder="Edad del estudiante"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_enfemedad" label="Enfermedad o Alergia" placeholder="Introducir aqui"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_nombreres" label="Tutol o Responsable" placeholder="Nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_numerores" label=" Numero del responsable" placeholder="Numero"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="inp_emailres" label="Email del responsable" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-button (click)="ft_addStudent()" class="ion-padding" expand="full">Pre-Inscribir</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <div style="height: 400px;"></div>
+  </div>
+
+</ion-content>
+
+
+<ion-footer>
+  <div *ngIf="this.arr_user[0].dep.length > 0">
+    <app-navegationrouter></app-navegationrouter>
+  </div>
+</ion-footer>

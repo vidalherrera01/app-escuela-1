@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container" class="background-page">
+    <ion-text>
+      <h1 class="text-big">Productos</h1>
+    </ion-text>
+  </div>
+  <div style="height: 140px;"></div>
+
+  <div class="grid-container">
+    <div class="producto-item" *ngFor="let item of arr_product; let i = index">
+      <div class="img">
+        <ion-img src={{item.img}}></ion-img>
+      </div>
+
+      <ul class="ul">
+        <li>{{item.nombre}}</li>
+        <li class="sobresaliente">RD${{item.precio}}</li>
+      </ul>
+
+      <!-- <ion-button [disabled]="arr_disabled.includes(i)" (click)="ft_addProduct(i)"
+        [ngClass]="{ 'green': arr_disabled.includes(i) }" fill="clear">
+        {{arr_disabled.includes(i) ? "Pre-Inscrito" : "Pre-Inscribir" }}
+      </ion-button> -->
+      <ion-button (click)="ft_addProduct(i)" fill="clear"> Comprar
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>
+<app-navegationrouter></app-navegationrouter>

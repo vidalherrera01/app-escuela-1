@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" class="background-page">
+
+    <div>
+      <div *ngIf="bl_interructor">
+        <ion-text>
+          <h2 class="text-big">Bienbenidos</h2>
+          <h1><strong>Escuela de natacion las espadas</strong></h1>
+        </ion-text>
+
+      </div>
+
+      <div *ngIf="!bl_interructor">
+        <ion-text>
+          <h2 class="text-big">Modo Registro</h2>
+        </ion-text>
+
+        <h3>Ingresa tus datos para registrarte </h3>
+      </div>
+
+      <img *ngIf="bl_interructor" src="/assets/img/Jvdm.gif" alt="Logo" class="logo">
+      <img width="400" *ngIf="!bl_interructor"
+        src="https://img.freepik.com/foto-gratis/registrese-ahora-concepto-formulario-llenado-documentos_53876-125596.jpg?ga=GA1.1.1686072600.1729371214&semt=ais_hybrid"
+        alt="Logo" class="logo">
+
+      <ion-item class="ion-padding-horizontal ion-margin">
+        <img width="30"
+          src="https://cdn-icons-png.freepik.com/256/9291/9291701.png?ga=GA1.1.1686072600.1729371214&semt=ais_hybrid"
+          alt="">
+        <ion-input [(ngModel)]="inp_correo" type="email" fill="solid" label="Email" labelPlacement="floating"
+          helperText="Enter a valid email" errorText="Invalid email" ngModel email></ion-input>
+      </ion-item>
+      <ion-item class="ion-padding-horizontal ion-margin">
+        <img width="30"
+          src="https://cdn-icons-png.freepik.com/256/348/348443.png?ga=GA1.1.1686072600.1729371214&semt=ais_hybrid"
+          alt="">
+        <ion-input [(ngModel)]="inp_pass" type="Password" fill="solid" label="Password" labelPlacement="floating">
+        </ion-input>
+      </ion-item>
+
+      <ion-button *ngIf="bl_interructor" class="ion-padding" (click)="ft_login()">Iniciar
+        Sesión</ion-button>
+      <ion-button *ngIf="!bl_interructor" class="ion-padding" (click)="ft_signup()">Registrarse</ion-button>
+      <ion-button *ngIf="!bl_interructor" class="ion-padding" (click)="ft_interructor()">Cancerlar</ion-button>
+
+      <div *ngIf="bl_interructor">
+        <ion-label>¿No tienes una cuenta? <a (click)="ft_interructor()" class="texto-cambio-2">Registrarse</a>
+        </ion-label>
+      </div>
+
+      <ion-alert [isOpen]="isAlertOpen" header="Alert" subHeader="Campo vacio"
+        message="Los campos no puenden estar vacios" [buttons]="alertButtons" (didDismiss)="setOpen(false)"></ion-alert>
+
+      <ion-alert [isOpen]="isAlertOpenSignup" header="Alert" subHeader="Error"
+        message="El Usuario ya existe, ingrese correo que no este registrado" [buttons]="alertButtonsSignup"
+        (didDismiss)="setOpen2(false)"></ion-alert>
+
+      <ion-alert [isOpen]="isAlertOpenIncorrect" header="Alert" subHeader="Error" message="Correo o clave incorrecta"
+        [buttons]="alertButtonsIncorrect" (didDismiss)="setOpen3(false)"></ion-alert>
+
+      <div style="height: 250px;"></div>
+    </div>
+  </div>
+
+
+
+</ion-content>

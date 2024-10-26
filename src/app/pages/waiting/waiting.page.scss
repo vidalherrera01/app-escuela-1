@@ -1,0 +1,30 @@
+.circle-container {
+    width: 500px;
+    max-height: 400px;
+    min-height: 400px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-image {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    animation: rotate 3s infinite;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) rotate(0deg);
+    }
+}
